@@ -1,58 +1,47 @@
-body {
-  background: linear-gradient(#141e30, #243b55);
-  margin:0;
-  padding:0;
-  border: 0;
-  font-weight: 400;
-  font-size: 90%;
-}
+/* If you want to apply general settings, apply it to both the HTML, and BODY tags */
+html, body {
+    height: 100%;
+    background: linear-gradient(#141e30, #243b55);
 
-.title {
     margin:0;
     padding:0;
     border: 0;
+
     font-family: 'Fira Code', sans-serif;
     font-weight: 400;
-    font-size: 200%;
-}
-
-.subtitle {
-    margin:0;
-    padding:0;
-    border: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
     font-size: 100%;
-    font-style: italic;
-}
-
-.MainContainer {
-    margin:0;
-    padding:0;
-    border: 0;
-    font-family: 'Fira Code', monospace;
-    font-weight: 400;
     color: #adb3ba;
-    background-color: rgba(0, 0, 0, 0.1);
 }
 
-.Blog_Entry {
-    margin:0;
-    padding:0;
-    border: 0;
+h1 {
     font-family: 'Fira Code', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 150%;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     font-size: 100%;
 }
 
 
-.blog_body {
-    margin:0;
-    padding:0;
-    border: 0;
-    font-weight: 300;
-    font-size: 100%;
+#MainContent{
+    background: rgba(85, 100, 117, 0.15);
+    margin: 50px auto;
+    min-width: 1000px;
+    width: 90%;
+    height: 80%;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 40px
+}
 
+.blog_entry {
+    margin: 10px auto;
+    margin-bottom: 40px;
+    border-left: 1px solid #adb3ba;
+    padding-left: 10px;
 }
 
 .Date {
