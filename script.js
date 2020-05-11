@@ -1,64 +1,56 @@
+// Name:                                            Renacin Matadeen
+// Date:                                               05/11/2020
+// Title                                            Open CV Research
+//
+// ----------------------------------------------------------------------------------------------------------------------
 
-// Create A Function So I can Iterate It Every Couple Of Seconds
-function UpdateClock() {
+// Create A Function To Store Everything
+function JavascriptBasics() {
 
+    // Creating a variable in Javascript | All variables must be instantiated before hand | Var type and val can change
+    var x;
+    var x = 3;
+    var x = "Three" // Note that escape characters work in strings, just like python!
 
-    // ---------------  Grab Date Information   ---------------
-    // Basic Date Information
-    var myDate = new Date(),
-    day = myDate.getDate(),
-    month = myDate.getMonth(),
-    year = myDate.getFullYear();
+    // Javascript support arrays, just like in Python
+    var list_of_months = ["September", "October", "November", "December"]
 
-    var months = ["January", "February", "March", "April", "May", "June",
-                  "July", "August", "September", "October", "Novermber", "December"];
+    // Javascript also supports dictionaries (called objects in JS)
+    var data_dictionary = {"ID": [1, 2, 3, 4], "Hours Studied": [3, 5, 4, 6], "Grade Received": [80, 90, 70, 100]}
 
-    var time_24hr;
-    var time_24hr_r = myDate.getHours();
-    if (time_24hr_r > 12) {time_24hr = time_24hr_r - 12}
-    else {time_24hr = time_24hr_r}
+    // Javascript supports while, and for loops | Becareful Of fencepost issue
+    var index;
+    var index_upperlimit = 10;
+    var text = "";
 
-    var time_minutes;
-    var time_minutes_r = myDate.getMinutes();
-    if (time_minutes_r < 10) {time_minutes = "0" + String(time_minutes_r);}
-    else {time_minutes = time_minutes_r}
+    for (index = 1; index < index_upperlimit; index++) {
+        text += index + "<br>";
+        // console.log(index);
+    }
 
-    var time_seconds;
-    var time_seconds_r = myDate.getSeconds();
-    if (time_seconds_r < 10) {time_seconds = "0" + String(time_seconds_r);}
-    else {time_seconds = time_seconds_r}
+    // Javascript Supports Try and Except, in this case however it's called try and catch
+    /*
+    var numm = 5;
+    try {fin_num = numm + nummber;}
+    catch(err){console.log("An Error Was Detected")}
+    */
 
-    var am_pm;
-    if (time_24hr_r >= 12) {am_pm = "PM";}
-    else if (time_24hr_r < 12) {am_pm = "AM";}
+    // Printing To The Console Log, and An Element
+    /*
+    console.log();
+    document.getElementById("Data").innerHTML = text;
+    */
+}
 
-
-    // ---------------  Grab Greeting Information   ---------------
-    // Determine The Appropriate Greeting For The Day
-    var greeting;
-    if (time_24hr_r >= 0 && time_24hr_r <= 6) {greeting = "Early Morning Regards Everyone!";}
-    else if (time_24hr_r >= 7 && time_24hr_r <= 11) {greeting = "Good Morning Everyone!";}
-    else if (time_24hr_r >= 12 && time_24hr_r <= 16) {greeting = "Good Afternoon Everyone!";}
-    else if (time_24hr_r >= 17 && time_24hr_r <= 20) {greeting = "Good Evening Everyone!";}
-    else if (time_24hr_r >= 23) {greeting = "Good Night Everyone!";}
-
-
-    // ---------------  Print Information To A Specific Tag   ---------------
-    var greeting_str = greeting;
-    var date_str = months[month] + " " + day + " " + year + ",";
-    var time_str = time_24hr + ":" + time_minutes + ":" + time_seconds + " " + am_pm;
-
-
-    document.getElementById("parsed_Greeting").innerHTML = greeting_str;
-    document.getElementById("parsed_Date").innerHTML = date_str;
-    document.getElementById("parsed_Time").innerHTML = time_str;
-
-
-    // ---------------  Print Information To Console   ---------------
-    // console.log(time_24hr, time_minutes, time_seconds, greeting)
-
+function UserInput() {
+    var user_val = document.getElementById('fname').value;
+    var greeting = "Hello " + user_val;
+    document.getElementById("parsed_greeting").innerHTML = greeting;
 }
 
 
+
+
+
+
 // --------------------------------------------------------------------------------------------------------------------
-setInterval(UpdateClock, 100); // Measured In Milliseconds
