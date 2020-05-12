@@ -1,56 +1,50 @@
+//
 // Name:                                            Renacin Matadeen
-// Date:                                               05/11/2020
-// Title                                            Open CV Research
+// Date:                                               05/12/2020
+// Title                                            Web-Design Basics
 //
 // ----------------------------------------------------------------------------------------------------------------------
 
+// navigator["appCodeName"]
+// navigator["appName"]
+// navigator["appMinorVersion"]
+// navigator["cpuClass"]
+// navigator["platform"]
+// navigator["plugins"]
+// navigator["opsProfile"]
+// navigator["userProfile"]
+// navigator["systemLanguage"]
+// navigator["userLanguage"]
+// navigator["appVersion"]
+// navigator["userAgent"]
+// navigator["onLine"]
+// navigator["cookieEnabled"]
+// navigator["mimeTypes"]
+
 // Create A Function To Store Everything
-function JavascriptBasics() {
+function display_computerstats() {
 
-    // Creating a variable in Javascript | All variables must be instantiated before hand | Var type and val can change
-    var x;
-    var x = 3;
-    var x = "Three" // Note that escape characters work in strings, just like python!
+    const browser_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    const browser_height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
-    // Javascript support arrays, just like in Python
-    var list_of_months = ["September", "October", "November", "December"]
+    var str_width = "Display Width: " + browser_width;
+    var str_height = "Display Height: " + browser_height;
 
-    // Javascript also supports dictionaries (called objects in JS)
-    var data_dictionary = {"ID": [1, 2, 3, 4], "Hours Studied": [3, 5, 4, 6], "Grade Received": [80, 90, 70, 100]}
+    document.getElementById("Display_Width").innerHTML = str_width;
+    document.getElementById("Display_Height").innerHTML = str_height;
 
-    // Javascript supports while, and for loops | Becareful Of fencepost issue
-    var index;
-    var index_upperlimit = 10;
-    var text = "";
+    console.log(navigator);
 
-    for (index = 1; index < index_upperlimit; index++) {
-        text += index + "<br>";
-        // console.log(index);
-    }
+    var OSName="Unknown OS";
+    if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+    if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+    if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+    if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
 
-    // Javascript Supports Try and Except, in this case however it's called try and catch
-    /*
-    var numm = 5;
-    try {fin_num = numm + nummber;}
-    catch(err){console.log("An Error Was Detected")}
-    */
+    console.log('Your OS: '+OSName);
 
-    // Printing To The Console Log, and An Element
-    /*
-    console.log();
-    document.getElementById("Data").innerHTML = text;
-    */
+
 }
-
-function UserInput() {
-    var user_val = document.getElementById('fname').value;
-    var greeting = "Hello " + user_val;
-    document.getElementById("parsed_greeting").innerHTML = greeting;
-}
-
-
-
-
-
 
 // --------------------------------------------------------------------------------------------------------------------
+display_computerstats()
