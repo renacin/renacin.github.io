@@ -1,7 +1,7 @@
 <!--
 // Name:                                            Renacin Matadeen
-// Date:                                               05/12/2020
-// Title                                            Web-Design Basics
+// Date:                                               05/18/2020
+// Title                                            Mapbox Basics
 //
 // ----------------------------------------------------------------------------------------------------------------------
 -->
@@ -15,31 +15,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!-- Link Fonts Styles -->
     <link href="https://fonts.googleapis.com/css?family=Fira+Code:300,400|Montserrat:300,400&display=swap" rel="stylesheet"> <!-- Import Fonts -->
 
-    <link rel="shortcut icon" href="fire_favicon.ico" /> <!-- Link Favicon -->
-    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link Stylesheet -->
+    <!-- Link Favicon -->
+    <link rel="shortcut icon" href="fire_favicon.ico" />
 
-    <title>JavascriptBasics</title>
+    <!-- Link Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Link MapBox CSS | https://docs.mapbox.com/mapbox-gl-js/overview/ -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
+
+
+
+    <title>Mapbox Basics</title>
 
 </head>
 <body>
 
-
-
     <div id="MainContent">
-        <div id="Workspace">
 
-            <!--Display Computer Stats That Can Be Pulled -->
-            <p id="Display_Width"></p>
-            <p id="Display_Height"></p>
 
+        <div id="Content"></div>
+
+
+        <div id="MainMap">
 
         </div>
+
+
     </div>
 
 
-    <!-- Scripts -->
+    <!-- Scripts | https://docs.mapbox.com/mapbox-gl-js/overview/-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
     <script type="text/javascript" src="script.js"></script>
 
 </body>
