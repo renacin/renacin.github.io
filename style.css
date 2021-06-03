@@ -1,0 +1,137 @@
+/* -------------------------------------------------------------------------- */
+/* Clear Any Styles Applied To The Basic Template */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'IosevkaRegular';
+    src: url('fonts/iosevka_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IosevkaThin';
+    src: url('fonts/iosevka_thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    text-decoration:none;
+    cursor:pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/* CSS Behind Most Elements */
+html {
+    background-color: #1A1A1A;
+    color:#F2F2F2;
+    font-family: 'IosevkaRegular';
+    min-width:800px;
+}
+
+.ans_colr {
+    color: #949494;
+    font-family: 'IosevkaThin';
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* CSS Behind Header Elements */
+.add_items {
+    margin: auto;
+    text-align: center;
+    display: table;
+    margin: 0px auto;
+}
+
+
+/* CSS Behind Navigation Header */
+.nav_list {
+    list-style-type: none;
+}
+
+#nav_items {
+    float: left;
+    margin: 0px;
+}
+
+.nav_item_h:hover {
+    background-color: #0D0D0D;
+}
+
+
+.navlink {
+    color: #949494;
+    font-family: 'IosevkaThin';
+    text-decoration: none;
+}
+
+.navlink:hover {
+    text-decoration:none;
+    cursor:pointer;
+    background-color: #0D0D0D;
+}
+
+/* CSS For My Name */
+#FirstName {
+    font-size: 80px;
+    margin: 40px auto;
+    font-family: 'IosevkaRegular';
+    color:#F2F2F2;
+    margin: 10px;
+
+}
+
+#LastName {
+    font-size: 80px;
+    margin: 40px auto;
+    font-family: 'IosevkaThin';
+    color:#F2F2F2;
+    margin: 10px;
+
+}
+
+.icon_images {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+/* -------------------------------------------------------------------------- */
+/* CSS Behind Main Content Elements */
+.blurb {
+    background-color: #1A1A1A;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 30px;
+    width: 750px;
+    margin: 0 auto;
+    color:#F2F2F2;
+}
+
+.blurb:not(#Welcome):hover {
+    background-color: #0D0D0D;
+}
+
+.code_back {
+    background-color: #333333;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* Misc Styling */
+.scrollicon {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+
+
+/* -------------------------------------------------------------------------- */
